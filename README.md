@@ -12,6 +12,8 @@ https://github.com/steeleye/recruitment-ext/blob/master/infra/TEST.md
    $ export AWS_ACCESS_KEY_ID=AKIAIOSFODN97EXAMPLE
    
    $ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+3. Make sure your ssh private and public keys are stored as ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub respectively. 
+
    
 ## Basic Structure
 
