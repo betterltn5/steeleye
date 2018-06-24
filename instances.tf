@@ -82,9 +82,7 @@ provisioner "remote-exec" {
     type = "ssh"
     private_key = "${file("~/.ssh/id_rsa")}"
   }
-#provisioner "local-exec" {
-#    command = "echo server ${self.private_ip}':'8484';'  >> nginx/backendservers.list"
-#  }
+
 
 }
 
@@ -129,6 +127,5 @@ provisioner "local-exec" {
 
 resource "aws_key_pair" "deployer1" {
   key_name   = "deployer1-key"
-  #public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCBGAjpsNfiIiIxYpECvbSNoi0UyjBKDZK15jcfSxX+jLtjSZ7JbQfwYdvawnqwZWLVnTv2+M9lU/XMl33otGhcFNAct31SahE7l/t8/ETFCDnv9HKIIU/Mzs+RnDkHCQGHwPZu+Ll1WbNN2NtSmsFv8rcXTgoUblNCcpDYtMAKoNQdidqXvL9PbofhZnYvzZldn112us1JxEoHS6RA+UcPVy/13+xoqNmFVgG9xCDPn8OBUewrMum8QKx84tKGCSRc4jyujwxf+w31bQzSQMECH0GZMl3NN9wpS6TvLuTWXYdj+MAD2pHesEs1BaoDDeVwMZBC52vDCRVYbNAqyg1Z mykeypair"
   public_key = "${file("~/.ssh/id_rsa.pub")}"
 }
